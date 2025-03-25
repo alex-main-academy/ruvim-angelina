@@ -1,0 +1,706 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+img,
+svg {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+input::-moz-placeholder {
+  color: inherit;
+}
+input::placeholder {
+  color: inherit;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  font-family: inherit;
+}
+
+@font-face {
+  font-family: "MonsieurLaDoulaise";
+  src: url("../fonts/MonsieurLaDoulaise-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arno";
+  src: url("../fonts/ArnoProLightDisplay-Regular.otf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Campora";
+  src: url("../fonts/campora-ultralight.ttf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #030303;
+  line-height: 1.2;
+  background-image: url(../img/bg.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.wrapper {
+  max-width: 48rem;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+.title {
+  font-family: "Arno";
+  font-weight: 400;
+  font-size: 3.4rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.hero__preloader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+.hero__preloader--left {
+  animation-name: bg-left;
+  animation-delay: 0.7s;
+  animation-timing-function: ease-in;
+  animation-duration: 1.2s;
+}
+.hero__preloader--right {
+  inset-inline-start: -0.1rem;
+  transform-origin: right;
+  animation-name: bg-right;
+  animation-timing-function: ease-out;
+  animation-duration: 1.6s;
+  animation-delay: 0.3s;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.15));
+}
+
+.hero__seal {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.hero .container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.hero__title {
+  position: relative;
+  font-family: "MonsieurLaDoulaise";
+  padding-block-start: 7rem;
+  font-weight: 400;
+  font-size: 7rem;
+  line-height: 0.6;
+  display: grid;
+  grid-gap: 1.5rem;
+}
+.hero__title--boy {
+  margin-inline-start: 3rem;
+}
+.hero__title--sign {
+  position: absolute;
+  inset-block-end: 7rem;
+  inset-inline-end: 11.2rem;
+  width: 7rem;
+}
+.hero__title--girl {
+  margin-inline-start: 14rem;
+}
+
+.hero__image {
+  border-start-start-radius: 25rem;
+  border-start-end-radius: 25rem;
+  overflow: hidden;
+  height: calc(100% - 7rem);
+  margin-block-start: auto;
+  padding-block-end: 2rem;
+}
+.hero__image-item {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@keyframes bg-right {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(-90deg);
+  }
+}
+@keyframes bg-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.welcome {
+  padding-block-start: 4rem;
+}
+
+.welcome__title {
+  margin-block-end: 3rem;
+}
+
+.welcome__text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.music {
+  padding-block: 13rem;
+}
+
+.music__button {
+  width: 100%;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.music__play {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.music__text {
+  animation-name: rotate-music;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-music {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.meet {
+  position: relative;
+  padding-inline: 2rem;
+  padding-block: 8rem;
+  overflow: hidden;
+  color: #fff;
+}
+.meet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+}
+
+.meet__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  filter: blur(0.4rem);
+}
+
+.meet__title {
+  position: relative;
+  z-index: 1;
+  font-family: "MonsieurLaDoulaise";
+  font-weight: 400;
+  font-size: 6rem;
+  text-align: center;
+  margin-block-end: 14rem;
+}
+.meet__title::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-end: -11rem;
+  height: 9rem;
+  width: 0.1rem;
+  background-color: #fff;
+}
+
+.meet__text {
+  position: relative;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.timer {
+  padding-block-start: 8rem;
+}
+
+.timer__title {
+  margin-block-end: 2rem;
+  font-size: 2.8rem;
+}
+
+.timer__list {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 2rem;
+}
+
+.timer__item {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  width: 5.5rem;
+}
+
+.timer__time {
+  font-family: "Campora";
+  font-size: 4.6rem;
+}
+
+.timer__dots {
+  font-size: 2.8rem;
+  margin-block-start: -1.5rem;
+}
+
+.timer__period {
+  font-size: 1.6rem;
+  text-transform: lowercase;
+}
+
+.calendar {
+  padding-block: 10rem;
+}
+
+.calendar__title {
+  margin-block-end: 3.5rem;
+}
+
+.calendar__list {
+  padding-inline: 4rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: center;
+}
+
+.calendar__item {
+  position: relative;
+  height: 5.1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Campora";
+}
+.calendar__item--day {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+.calendar__item--heart::before {
+  content: "";
+  position: absolute;
+  inset: -0.3rem;
+  background-image: url(../img/icons/heart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 0.1rem center;
+}
+
+.timing__title {
+  margin-block-end: 8rem;
+}
+
+.timing__list {
+  position: relative;
+  display: grid;
+  grid-gap: 6rem;
+  padding-inline-start: 12rem;
+}
+.timing__list::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 7rem;
+  inset-block-start: 1.5rem;
+  width: 0.1rem;
+  height: calc(100% - 10rem);
+  background-color: rgba(3, 3, 3, 0.262745098);
+}
+
+.timing__item {
+  position: relative;
+  display: grid;
+  grid-gap: 1.3rem;
+}
+.timing__item::before {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  inset-inline-start: -6.2rem;
+  inset-block-start: 0.8rem;
+}
+.timing__item::after {
+  content: "";
+  position: absolute;
+  width: 1.9rem;
+  height: 1.9rem;
+  background-image: url(../img/icons/heart.svg);
+  background-size: contain;
+  inset-inline-start: -5.9rem;
+  inset-block-start: 1.1rem;
+}
+
+.timing__time {
+  font-family: "Campora";
+  font-size: 3rem;
+}
+
+.timing__event {
+  font-family: "Arno";
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.timing__about {
+  font-size: 1.6rem;
+  font-weight: 300;
+  max-width: 30rem;
+}
+
+.photo {
+  padding-block: 10rem;
+}
+
+.photo__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.photo__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dress__title {
+  margin-block-end: 2rem;
+}
+
+.dress__description {
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 300;
+  max-width: 38rem;
+  margin-inline: auto;
+  margin-block-end: 4rem;
+}
+
+.dress__list {
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.dress__item {
+  height: 3rem;
+  width: 30rem;
+}
+.dress__item--first {
+  background-color: #4c4a33;
+}
+.dress__item--second {
+  background-color: #6e6e4c;
+}
+.dress__item--third {
+  background-color: #9b9283;
+}
+.dress__item--fourth {
+  background-color: #bcb3a4;
+}
+.dress__item--fifth {
+  background-color: #f5f7e9;
+}
+
+.location {
+  padding-block-end: 10rem;
+}
+
+.location__title {
+  margin-block-end: 4rem;
+}
+
+.location__list-wrapper {
+  position: relative;
+}
+.location__list-wrapper::before, .location__list-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 0.1rem;
+  width: calc(100% - 2rem);
+  background-color: rgba(3, 3, 3, 0.262745098);
+  inset-inline-start: 2rem;
+}
+.location__list-wrapper::after {
+  inset-inline-start: 0;
+}
+
+.location__list {
+  position: relative;
+  display: grid;
+  grid-gap: 5rem;
+  padding-block: 4rem;
+}
+.location__list::before, .location__list::after {
+  content: "";
+  position: absolute;
+  height: calc(100% - 2rem);
+  width: 0.1rem;
+  background-color: rgba(3, 3, 3, 0.262745098);
+}
+.location__list::after {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+  inset-block-start: 2rem;
+}
+
+.location__item--heart {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.location__event {
+  font-family: "Arno";
+  font-size: 3.6rem;
+  text-align: center;
+  font-weight: 400;
+  margin-block-end: 1rem;
+}
+
+.location__place {
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: center;
+  margin-block-end: 1.6rem;
+  line-height: 1.4;
+}
+.location__place b {
+  font-weight: 500;
+}
+
+.location__link {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1.2rem;
+  width: 28rem;
+  height: 4.6rem;
+  margin-inline: auto;
+  background-color: #373636;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.register {
+  padding-block-start: 10rem;
+}
+
+.register__title {
+  margin-block-end: 2rem;
+}
+
+.register__description {
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.4;
+  margin-block-end: 3rem;
+}
+
+.register__order {
+  display: grid;
+  grid-gap: 1.2rem;
+  padding-inline: 4rem;
+}
+
+.order__field {
+  display: block;
+  height: 5.2rem;
+  border: 0.1rem solid #373636;
+  width: 100%;
+  padding-inline: 1.6rem;
+  font-size: 1.6rem;
+}
+.order__field::-moz-placeholder {
+  opacity: 0.5;
+}
+.order__field::placeholder {
+  opacity: 0.5;
+}
+
+.order__label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding-inline-start: 4rem;
+  margin-block-start: 0.4rem;
+}
+
+.order__label span {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.order__radio {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.order__radio::before {
+  content: "";
+  position: absolute;
+  inset-block-start: -1.5rem;
+  inset-inline-start: -4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #ffffff;
+  border: 0.1rem solid #373636;
+}
+
+.order__radio::after {
+  content: "";
+  position: absolute;
+  inset-block-start: -0.9rem;
+  inset-inline-start: -3.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #373636;
+  opacity: 0;
+}
+
+.order__radio:checked::after {
+  opacity: 1;
+}
+
+.order__submit {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #373636;
+  color: #fff;
+  height: 5rem;
+  font-size: 1.8rem;
+  margin-block-start: 3rem;
+}
+
+.footer {
+  padding-block: 15rem 3rem;
+}
+
+.footer .container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.footer__link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+}/*# sourceMappingURL=index.css.map */

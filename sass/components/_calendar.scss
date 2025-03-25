@@ -1,0 +1,43 @@
+.calendar {
+  padding-block: 10rem;
+}
+
+.calendar__title {
+  margin-block-end: 3.5rem;
+}
+
+.calendar__list {
+  padding-inline: 4rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: center;
+}
+
+.calendar__item {
+  position: relative;
+  height: 5.1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  font-family: $font-number;
+
+  &--day {
+    font-weight: 600;
+    font-family: $font-primary;
+    font-size: 1.6rem;
+  }
+
+  &--heart {
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -0.3rem;
+      background-image: url(../img/icons/heart.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top 0.1rem center;
+    }
+  }
+}

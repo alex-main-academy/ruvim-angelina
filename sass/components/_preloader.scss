@@ -1,0 +1,56 @@
+.wrapper {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 60vh;
+  z-index: 5;
+  background-image: url(../img/bg-top.png);
+  background-size: cover;
+  background-position: bottom center;
+  animation-duration: 1400ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1000ms;
+}
+
+.wrapper::before {
+  animation-name: top-letter;
+  z-index: 10;
+}
+
+.wrapper::after {
+  inset-block-start: auto;
+  inset-block-end: 0;
+  background-image: url(../img/bg-bottom.png);
+  background-position: top center;
+  animation-name: bottom-letter;
+}
+
+@keyframes top-letter {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes bottom-letter {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}

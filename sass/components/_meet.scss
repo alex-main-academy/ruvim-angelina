@@ -1,0 +1,52 @@
+.meet {
+  position: relative;
+  padding-inline: 2rem;
+  padding-block: 8rem;
+  overflow: hidden;
+  color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #00000075;
+  }
+}
+
+.meet__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  filter: blur(0.4rem);
+}
+
+.meet__title {
+  position: relative;
+  z-index: 1;
+  font-family: $font-decorative;
+  font-weight: 400;
+  font-size: 6rem;
+  text-align: center;
+  margin-block-end: 14rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-end: -11rem;
+    height: 9rem;
+    width: 0.1rem;
+    background-color: #fff;
+  }
+}
+
+.meet__text {
+  position: relative;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+.dress__title {
+  margin-block-end: 2rem;
+}
+
+.dress__description {
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 300;
+  max-width: 38rem;
+  margin-inline: auto;
+  margin-block-end: 4rem;
+}
+
+.dress__list {
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.dress__item {
+  height: 3rem;
+  width: 30rem;
+
+  &--first {
+    background-color: #4c4a33;
+  }
+
+  &--second {
+    background-color: #6e6e4c;
+  }
+
+  &--third {
+    background-color: #9b9283;
+  }
+
+  &--fourth {
+    background-color: #bcb3a4;
+  }
+
+  &--fifth {
+    background-color: #f5f7e9;
+  }
+}

@@ -1,0 +1,31 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-primary;
+  line-height: 1.2;
+  background-image: url(../img/bg.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.wrapper {
+  max-width: 48rem;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+.title {
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 3.4rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}

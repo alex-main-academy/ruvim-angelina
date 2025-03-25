@@ -1,0 +1,35 @@
+.music {
+  padding-block: 13rem;
+}
+
+.music__button {
+  width: 100%;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.music__play {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.music__text {
+  animation-name: rotate-music;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-music {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,65 @@
+.timing__title {
+  margin-block-end: 8rem;
+}
+
+.timing__list {
+  position: relative;
+  display: grid;
+  grid-gap: 6rem;
+  padding-inline-start: 12rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 7rem;
+    inset-block-start: 1.5rem;
+    width: 0.1rem;
+    height: calc(100% - 10rem);
+    background-color: #03030343;
+  }
+}
+
+.timing__item {
+  position: relative;
+  display: grid;
+  grid-gap: 1.3rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    inset-inline-start: -6.2rem;
+    inset-block-start: 0.8rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-image: url(../img/icons/heart.svg);
+    background-size: contain;
+    inset-inline-start: -5.9rem;
+    inset-block-start: 1.1rem;
+  }
+}
+
+.timing__time {
+  font-family: $font-number;
+  font-size: 3rem;
+}
+
+.timing__event {
+  font-family: $font-title;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.timing__about {
+  font-size: 1.6rem;
+  font-weight: 300;
+  max-width: 30rem;
+}

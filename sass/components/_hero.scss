@@ -1,0 +1,108 @@
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.hero__preloader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation-fill-mode: forwards;
+  z-index: 10;
+
+  &--left {
+    animation-name: bg-left;
+    animation-delay: 0.7s;
+    animation-timing-function: ease-in;
+    animation-duration: 1.2s;
+  }
+
+  &--right {
+    inset-inline-start: -0.1rem;
+    transform-origin: right;
+    animation-name: bg-right;
+    animation-timing-function: ease-out;
+    animation-duration: 1.6s;
+    animation-delay: 0.3s;
+
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.15));
+  }
+}
+
+.hero__seal {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.hero .container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.hero__title {
+  position: relative;
+  font-family: $font-decorative;
+  padding-block-start: 7rem;
+  font-weight: 400;
+  font-size: 7rem;
+  line-height: 0.6;
+
+  display: grid;
+  grid-gap: 1.5rem;
+
+  &--boy {
+    margin-inline-start: 3rem;
+  }
+
+  &--sign {
+    position: absolute;
+    inset-block-end: 7rem;
+    inset-inline-end: 11.2rem;
+    width: 7rem;
+  }
+
+  &--girl {
+    margin-inline-start: 14rem;
+  }
+}
+
+.hero__image {
+  border-start-start-radius: 25rem;
+  border-start-end-radius: 25rem;
+  overflow: hidden;
+  height: calc(100% - 7rem);
+  margin-block-start: auto;
+  padding-block-end: 2rem;
+
+  &-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@keyframes bg-right {
+  0% {
+    transform: rotateY(0);
+  }
+
+  100% {
+    transform: rotateY(-90deg);
+  }
+}
+
+@keyframes bg-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

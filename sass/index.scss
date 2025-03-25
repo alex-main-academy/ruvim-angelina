@@ -1,0 +1,20 @@
+// global styles
+@import './reset';
+@import './fonts';
+@import './vars';
+@import './utils';
+// @import './components/preloader';
+
+// components
+@import './components/hero';
+@import './components/welcome';
+@import './components/music';
+@import './components/meet';
+@import './components/timer';
+@import './components/calendar';
+@import './components/timing';
+@import './components/photo';
+@import './components/dress';
+@import './components/location';
+@import './components/register';
+@import './components/footer';

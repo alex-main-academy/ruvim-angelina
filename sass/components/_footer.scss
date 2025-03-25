@@ -1,0 +1,17 @@
+.footer {
+  padding-block: 15rem 3rem;
+}
+
+.footer .container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.footer__link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+}
