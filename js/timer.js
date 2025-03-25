@@ -26,5 +26,5 @@ function startCountdown(targetDate) {
   const timerInterval = setInterval(updateTimer, 1000);
 }
 
-const targetDate = new Date(2025, 5, 25, 10, 0, 0).getTime();
+const targetDate = new Date(2025, 4, 25, 11, 0, 0).getTime();
 startCountdown(targetDate);
