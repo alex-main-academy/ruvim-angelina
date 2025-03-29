@@ -1,5 +1,5 @@
 // aos animation
-// import './aos-animation.js';
+import './aos-animation.js';
 
 // preloading images
 // import './preloading-images';
