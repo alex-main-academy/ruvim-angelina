@@ -1,5 +1,5 @@
 // aos animation
-import './aos-animation.js';
+// import './aos-animation.js';
 
 // preloading images
 // import './preloading-images';
@@ -12,3 +12,6 @@ import './timer.js';
 
 // music
 import './music.js';
+
+// change photo
+import './change-photo.js';

@@ -1,6 +1,15 @@
 .hero {
   position: relative;
   height: 100vh;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 30rem;
+    background-image: linear-gradient(to bottom, #000000c4, #00000000);
+    z-index: 1;
+  }
 }
 
 .hero__preloader {
@@ -46,44 +55,42 @@
 
 .hero__title {
   position: relative;
+  z-index: 1;
   font-family: $font-decorative;
   padding-block-start: 7rem;
   font-weight: 400;
   font-size: 7rem;
   line-height: 0.6;
+  color: #fff;
 
   display: grid;
   grid-gap: 1.5rem;
 
   &--boy {
-    margin-inline-start: 3rem;
+    margin-inline-start: 6rem;
   }
 
   &--sign {
     position: absolute;
     inset-block-end: 7rem;
-    inset-inline-end: 11.2rem;
+    inset-inline-end: 13.2rem;
     width: 7rem;
   }
 
   &--girl {
-    margin-inline-start: 14rem;
+    margin-inline-start: 12rem;
   }
 }
 
 .hero__image {
-  border-start-start-radius: 25rem;
-  border-start-end-radius: 25rem;
-  overflow: hidden;
-  height: calc(100% - 7rem);
-  margin-block-start: auto;
-  padding-block-end: 2rem;
+  position: absolute;
+  inset: 0;
 
   &-item {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: bottom center;
   }
 }
 

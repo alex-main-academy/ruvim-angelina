@@ -1,0 +1,42 @@
+.wishes {
+  padding-block: 8rem;
+  background-color: #373636;
+  color: #fff;
+}
+
+.wishes__title {
+  margin-block-end: 4rem;
+}
+
+.wishes__text {
+  position: relative;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-inline: 3rem;
+  margin-block-end: 10rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-end: -5rem;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 0.1rem;
+    background-color: #fff;
+  }
+
+  & + & {
+    margin-block-end: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.wishes__letter {
+  margin-inline: auto;
+  margin-block-start: 3rem;
+}
