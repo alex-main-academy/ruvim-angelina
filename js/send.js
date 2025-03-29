@@ -36,7 +36,7 @@ document.querySelector('.register__order').addEventListener('submit', function (
     .then((data) => {
       // Если все прошло успешно, перенаправляем на YouTube
       if (data.result === 'success') {
-        window.location.href = 'https://www.youtube.com';
+        window.location.href = 'https://elisey-angelina.vercel.app/thanks.html';
       } else {
         // Если ошибка, восстанавливаем кнопку и показываем сообщение об ошибке
         submitButton.disabled = false;
