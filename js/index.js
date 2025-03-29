@@ -8,7 +8,7 @@ import './aos-animation.js';
 import './timer.js';
 
 // send form
-// import './send.js';
+import './send.js';
 
 // music
 import './music.js';

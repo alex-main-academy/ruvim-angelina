@@ -27,7 +27,7 @@
     background-color: #fff;
   }
 
-  & + & {
+  &--last {
     margin-block-end: 0;
 
     &::before {

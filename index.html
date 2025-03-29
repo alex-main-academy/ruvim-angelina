@@ -284,6 +284,14 @@
               с кем останутся ваши детки
             </p>
             <p class="wishes__text" class="dress__title title" data-aos="fade-up" data-aos-duration="1600">
+              Если у вас изменились планы и вы не сможете быть на свадьбе, просим дать об этом знать как можно скорее
+            </p>
+            <p
+              class="wishes__text wishes__text--last"
+              class="dress__title title"
+              data-aos="fade-up"
+              data-aos-duration="1600"
+            >
               Будем рады, если вы предпочтете принести свой подарок в конверте
             </p>
             <img
@@ -307,12 +315,13 @@
             <form class="register__order order">
               <input type="text" name="name" minlength="3" class="order__field" placeholder="Имя, Фамилия" required />
               <input type="number" name="count" class="order__field" placeholder="Количество людей" required />
+              <input type="hidden" name="date" class="order__date" />
               <label class="order__label">
-                <input type="radio" class="order__radio" name="precense" id="true" value="yes" />
+                <input type="radio" class="order__radio" name="presence" id="true" value="yes" required />
                 <span>Я смогу прийти</span>
               </label>
               <label class="order__label">
-                <input type="radio" class="order__radio" name="precense" id="false" value="no" />
+                <input type="radio" class="order__radio" name="presence" id="false" value="no" required />
                 <span>Я не смогу прийти</span>
               </label>
               <button class="order__submit" data-aos="zoom-in" data-aos-duration="1000">Отправить</button>

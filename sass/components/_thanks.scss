@@ -1,0 +1,75 @@
+.thanks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  // background-color: #faf6f3;
+  padding-inline: 20px;
+  background-image: url(../img/thanks-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.thanks::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background-color: rgba(255, 255, 255, 0.602);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.thanks .container {
+  min-width: 100%;
+}
+
+.thanks__title {
+  position: relative;
+  font-size: 50px;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.thanks__desc {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.thanks__logo {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+}
+
+.thanks__link {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 4px;
+
+  background-color: #373636;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
