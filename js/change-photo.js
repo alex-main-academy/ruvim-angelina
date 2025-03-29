@@ -8,6 +8,6 @@ function updateImage() {
   if (screenWidth > 375) {
     heroImage.src = 'img/main-photo-big.jpg';
   } else {
-    heroImage.src = 'img/main-photo.jpg';
+    heroImage.src = 'img/main-photo-small.jpg';
   }
 }
