@@ -1,7 +1,19 @@
 .wishes {
+  position: relative;
   padding-block: 8rem;
-  background-color: #373636;
   color: #fff;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -0.4rem;
+    background-image: linear-gradient(to right, #373636c2, #373636c2), url(../img/meet-bg.JPG);
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    background-position: center;
+    filter: blur(0.4rem);
+  }
 }
 
 .wishes__title {
